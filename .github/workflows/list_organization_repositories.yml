@@ -33,9 +33,9 @@ jobs:
           chmod +x list_org_repos.sh
           ./list_org_repos.sh
 
+      # Creats a csv artifact containg the repo details
       - name: upload organization repository details
         uses: actions/upload-artifact@v2.2.4
         with:
           name: oraganization_repository_details.csv
-          path: oraganization_repository_details.csv
-  
+          path: oraganization_repository_details.csvx
