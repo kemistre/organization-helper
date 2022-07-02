@@ -29,6 +29,7 @@ jobs:
       - name: Fetch all repos in organization 
         env: # Or as an environment variable
           github_token: ${{ secrets.LOCAL_GITHUB_TOKEN }}
+          organization: ${{ github.organization }}
         run: |
           chmod +x list_org_repos.sh
           ./list_org_repos.sh
