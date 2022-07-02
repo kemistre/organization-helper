@@ -7,6 +7,7 @@ jq --version
 # organization="$1"
 # github_token="$2"
 # organization=kemistre
+ORG_NAME=kemistre
 github_api_url='https://api.github.com'
 
 
@@ -19,7 +20,7 @@ echo repository, html_url, api_url, created_at, pushed_at, advanced_security, se
 for (( c=$START; c<=$total_pages; c++ ))
 do
 	echo "=============Navigating Page number: $c============="
-	echo "=============Listing repos in organization: $ORG_NAME'=============" 
+	echo "=============Listing repos in organization: $ORG_NAME=============" 
 	list_repos_url="${github_api_url}/orgs/$ORG_NAME/repos?per_page=10&page=${c}"
 	echo "List Repo URL: $list_repos_url"
     all_repo_list=$(curl --location --request GET -H 'Accept: application/vnd.github.+json' -H "Authorization: token $LOCAL_GITHUB_TOKEN" $list_repos_url)
