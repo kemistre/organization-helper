@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: oraganization_repository_details.csv
-          path: oraganization_repository_details.csvx
+          path: oraganization_repository_details.csv
